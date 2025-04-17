@@ -45,6 +45,7 @@ object ConfLoader {
                 input.copyTo(output)
             }
         }
+        tempFile.deleteOnExit()
 
         return load(tempFile)
 
