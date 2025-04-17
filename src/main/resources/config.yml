@@ -1,0 +1,22 @@
+
+cache:
+  maxSize: 200
+  minutesDuration: 10
+
+language:
+  fallback: "es_MX"  # default language that the user will be prompted with if his language isn't found in the locales folder
+
+license:
+  key: "xxxx-yyyy-zzzz"
+  scope: "premium"
+
+storage:
+  method: "h2"  # options are: "h2", "sqlite", "mariadb", "postgresql"
+  address: "h2data"  # Not required for SQLite, folder for H2, should include port for MariaDB/PostgreSQL, default for MariaDB is 3306, for PostgreSQL is 5432
+  database: "mydb"  # Path for SQLite/H2, database name for MariaDB/PostgreSQL
+  username: "bryanvalc"  # Not required for SQLite
+  password: "123"  # Not required for SQLite
+  tablePrefix: "pl_"  # Only needed for MariaDB/PostgreSQL
+  # Additional arguments for MariaDB/PostgreSQL connection, for MariaDB you might want to set it to:
+  # useSSL=false&allowPublicKeyRetrieval=true, for PostgreSQL use ssl=false , but be cautious
+  args: ""

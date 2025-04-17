@@ -1,0 +1,7 @@
+name: PluginTemplateKt
+version: '1.0-SNAPSHOT'
+main: com.bryanvalc.pluginTemplateKt.PluginTemplateKt
+api-version: '1.21'
+authors: [ BryanValc, hhitt ]
+depend: [ CommandAPI ]
+softdepend: [ PlaceholderAPI ]
