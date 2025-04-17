@@ -7,6 +7,8 @@ import com.bryanvalc.pluginTemplateKt.listener.PlayerJoin
 import com.bryanvalc.pluginTemplateKt.module.Debug
 import com.bryanvalc.pluginTemplateKt.module.Loader
 import com.bryanvalc.pluginTemplateKt.module.appModules
+import org.bstats.bukkit.Metrics
+import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -25,8 +27,32 @@ class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
     private val debug: Debug by inject()
 
     override fun onEnable() {
-        val pluginModule = module {
-            single<JavaPlugin> {
+        // First, Koin startup
+        initModules()
+
+        // Load & init command
+        loadCommands()
+
+        // Validate license, this is a must, also we recommend to hide into other code
+        // parts, here at main class is not a good practice and easily detectable
+        checkLicense()
+
+        // Register events, remember that can use MCCoroutine for async tasks
+        registerEvents()
+
+        // Hook other plugins, like PlaceholderAPI or FAWE if needed
+        hookPlugins()
+
+        // BStats metrics (remember to change the pluginId!!!)
+        setupMetrics()
+    }
+
+    override fun onDisable() {
+       debug.msg("Disabling plugin template in kotlin")
+    }
+
+    private fun initModules(){
+        val pluginModule = module { single<JavaPlugin> {
                 this@PluginTemplateKt
             }
         }
@@ -37,41 +63,38 @@ class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
         allModules.addAll(appModules)
 
         val finalModules = allModules.toList()
-
         startKoin {
             modules(finalModules)
         }
 
         loader.bootstrap()
-        // it's up to you if you want to use license system
-//        if(!license.validate()){
-//            Bukkit.getPluginManager().disablePlugin(this)
-//            return
-//        }
-//        debug.msg("License loaded correctly")
-
-        // bStats, get your own at https://bstats.org/plugin-list
-//        val pluginId = -1
-//        val metrics = Metrics(this, pluginId)
-
-        // Events
-        server.pluginManager.registerEvents(PlayerJoin(), this)
-
-        // Placeholders
-//        if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
-//            Momentum().register()
-//        }
-
     }
 
-    override fun onDisable() {
-        // Plugin shutdown logic
-    }
-
-    fun loadCommands(){
+    private fun loadCommands(){
         val lamp: Lamp<BukkitCommandActor> = BukkitLamp.builder(this)
             .build()
         lamp.register(MainCommand())
+    }
+
+    private fun checkLicense(){
+        if(!license.validate()){
+            Bukkit.getPluginManager().disablePlugin(this)
+            return
+        }
+        debug.msg("License loaded correctly")
+    }
+
+    private fun registerEvents(){
+        server.pluginManager.registerEvents(PlayerJoin(), this)
+    }
+
+    private fun hookPlugins(){
+    //  if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) Momentum().register()
+    }
+
+    private fun setupMetrics(){
+        val pluginId = -1
+        val metrics = Metrics(this, pluginId)
     }
 
 }
