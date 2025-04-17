@@ -3,7 +3,7 @@ package com.bryanvalc.pluginTemplateKt
 import com.bryanvalc.pluginTemplateKt.command.MainCommand
 import com.bryanvalc.pluginTemplateKt.common.module.License
 import com.bryanvalc.pluginTemplateKt.common.module.baseModules
-import com.bryanvalc.pluginTemplateKt.listener.PlayerJoin
+import com.bryanvalc.pluginTemplateKt.listener.PlayerJoinListener
 import com.bryanvalc.pluginTemplateKt.module.Debug
 import com.bryanvalc.pluginTemplateKt.module.Loader
 import com.bryanvalc.pluginTemplateKt.module.appModules
@@ -27,15 +27,17 @@ class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
     private val debug: Debug by inject()
 
     override fun onEnable() {
+        debug.msg("Enabling plugin template in kotlin!")
+
         // First, Koin startup
         initModules()
-
-        // Load & init command
-        loadCommands()
 
         // Validate license, this is a must, also we recommend to hide into other code
         // parts, here at main class is not a good practice and easily detectable
         checkLicense()
+
+        // Load & init command
+        loadCommands()
 
         // Register events, remember that can use MCCoroutine for async tasks
         registerEvents()
@@ -48,7 +50,7 @@ class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
     }
 
     override fun onDisable() {
-       debug.msg("Disabling plugin template in kotlin")
+       debug.msg("Disabling plugin template in kotlin!")
     }
 
     private fun initModules(){
@@ -85,7 +87,7 @@ class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
     }
 
     private fun registerEvents(){
-        server.pluginManager.registerEvents(PlayerJoin(), this)
+        server.pluginManager.registerEvents(PlayerJoinListener(), this)
     }
 
     private fun hookPlugins(){

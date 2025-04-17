@@ -14,7 +14,7 @@ import org.jetbrains.exposed.sql.transactions.transaction
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-class PlayerJoin(): Listener, KoinComponent {
+class PlayerJoinListener(): Listener, KoinComponent {
 
     val plugin: JavaPlugin by inject()
     val database: Database by inject()
