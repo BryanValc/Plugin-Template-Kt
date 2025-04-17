@@ -38,7 +38,6 @@ repositories {
     }
 }
 // PURE MINECRAFT
-val paperVersion: String by project
 val bStatsVersion: String by project
 val adventureVersion: String by project
 val commandApiVersion: String by project
@@ -67,7 +66,6 @@ val h2Version: String by project
 
 dependencies {
     paperweight.paperDevBundle("1.21.4-R0.1-SNAPSHOT")
-    compileOnly("io.papermc.paper:paper-api:$paperVersion")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // bStats
