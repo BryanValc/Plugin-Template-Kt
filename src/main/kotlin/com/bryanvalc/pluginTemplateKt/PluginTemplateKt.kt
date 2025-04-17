@@ -1,8 +1,6 @@
 package com.bryanvalc.pluginTemplateKt
 
-import com.bryanvalc.pluginTemplateKt.command.ReadData
-import com.bryanvalc.pluginTemplateKt.command.Reload
-import com.bryanvalc.pluginTemplateKt.command.SetData
+import com.bryanvalc.pluginTemplateKt.command.MainCommand
 import com.bryanvalc.pluginTemplateKt.common.module.License
 import com.bryanvalc.pluginTemplateKt.common.module.baseModules
 import com.bryanvalc.pluginTemplateKt.listener.PlayerJoin
@@ -15,6 +13,9 @@ import org.koin.core.component.inject
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
 import org.koin.dsl.module
+import revxrsal.commands.Lamp
+import revxrsal.commands.bukkit.BukkitLamp
+import revxrsal.commands.bukkit.actor.BukkitCommandActor
 import revxrsal.zapper.ZapperJavaPlugin
 
 class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
@@ -53,11 +54,6 @@ class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
 //        val pluginId = -1
 //        val metrics = Metrics(this, pluginId)
 
-        // Commands TODO: check Lamp
-        Reload().register()
-        ReadData().register()
-        SetData().register()
-
         // Events
         server.pluginManager.registerEvents(PlayerJoin(), this)
 
@@ -71,4 +67,11 @@ class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
     override fun onDisable() {
         // Plugin shutdown logic
     }
+
+    fun loadCommands(){
+        val lamp: Lamp<BukkitCommandActor> = BukkitLamp.builder(this)
+            .build()
+        lamp.register(MainCommand())
+    }
+
 }

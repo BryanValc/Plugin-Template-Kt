@@ -74,9 +74,9 @@ dependencies {
     // Adventure
     zap("net.kyori:adventure-text-serializer-plain:$adventureVersion")
     zap("net.kyori:adventure-text-serializer-legacy:$adventureVersion")
-    // CommandAPI
-    zap("dev.jorel:commandapi-bukkit-kotlin:$commandApiVersion")
-    compileOnly("dev.jorel:commandapi-bukkit-core:$commandApiVersion")
+    // Lamp
+    zap("io.github.revxrsal:lamp.common:4.0.0-beta.25")
+    zap("io.github.revxrsal:lamp.bukkit:4.0.0-beta.25")
     // PAPI
     compileOnly("me.clip:placeholderapi:$papiVersion")
     // coroutines
