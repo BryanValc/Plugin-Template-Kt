@@ -37,31 +37,33 @@ repositories {
         name = "jitpack"
     }
 }
-
-val paperVersion: String by project // PURE MINECRAFT
+// PURE MINECRAFT
+val paperVersion: String by project
 val bStatsVersion: String by project
 val adventureVersion: String by project
 val commandApiVersion: String by project
 val papiVersion: String by project
 val mcCoroutineVersion: String by project
-
 val rTagVersion: String by project
 val knbtVersion: String by project
 val kamlVersion: String by project
 
-val licenseGateVersion: String by project // LICENSING
+// LICENSING
+val licenseGateVersion: String by project
 
-val serializationVersion: String by project // SERIALIZATION AND CONFIGS
+// SERIALIZATION AND CONFIGS
+val serializationVersion: String by project
 
-val caffeineVersion: String by project // CACHING AND DATABASES
+// CACHING AND DATABASES
+val caffeineVersion: String by project
 val koinVersion: String by project
-
 val exposedVersion: String by project
 val sqliteVersion: String by project
 val mariadbVersion: String by project
 val hikariVersion: String by project
 val postgresVersion: String by project
 val h2Version: String by project
+
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:$paperVersion")
