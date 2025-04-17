@@ -32,8 +32,8 @@ class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
         // First, Koin startup
         initModules()
 
-        // Validate license, this is a must, also we recommend to hide into other code
-        // parts, here at main class is not a good practice and easily detectable
+        // Validate license. This is a must; also we recommend to hide into other code
+        // parts, here at main class is not a good practice and is easily detectable!
         checkLicense()
 
         // Load & init command
@@ -91,12 +91,13 @@ class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
     }
 
     private fun hookPlugins(){
+    // Quick example:
     //  if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) Momentum().register()
     }
 
     private fun setupMetrics(){
         val pluginId = -1
-        val metrics = Metrics(this, pluginId)
+        Metrics(this, pluginId)
     }
 
 }
