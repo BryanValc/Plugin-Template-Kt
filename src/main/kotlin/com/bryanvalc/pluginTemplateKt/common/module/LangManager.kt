@@ -4,6 +4,7 @@ import com.bryanvalc.pluginTemplateKt.common.config.LanguageConfig
 import com.bryanvalc.pluginTemplateKt.common.service.ConfLoader
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
+import java.io.InputStream
 import java.util.Locale
 
 
@@ -11,7 +12,8 @@ import java.util.Locale
 class LangManager (
     val localesFolder: File,
     val config: LanguageConfig,
-    val plugin: JavaPlugin
+    val defaultFile: InputStream?,
+    val defaultFileExtension: String
 ) {
 
     var languages = mutableMapOf<String, Any>()
@@ -40,12 +42,10 @@ class LangManager (
 
         }
 
-        val defaultFile = plugin.getResource("locales/es_MX_messages.yml")
-
         val languagePackage = if (defaultFile == null) {
             ConfLoader.load<T>(langFile)!!
         } else {
-            ConfLoader.load<T>(defaultFile, "yml")!!
+            ConfLoader.load<T>(defaultFile, defaultFileExtension)!!
         }
 
         languages.put(language, languagePackage)

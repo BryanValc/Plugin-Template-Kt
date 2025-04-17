@@ -34,7 +34,10 @@ val langManagerModule = module {
         val configuration = get<LanguageConfig>()
         val repositories = get<LocalesRepository>()
         val plugin = get<JavaPlugin>()
-        LangManager(repositories.folder, configuration, plugin)
+
+        val defaultFile = plugin.getResource("locales/es_MX_messages.yml")
+
+        LangManager(repositories.folder, configuration, defaultFile, "yml")
     }
 }
 
