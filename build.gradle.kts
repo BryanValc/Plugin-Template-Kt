@@ -1,8 +1,9 @@
 plugins {
     kotlin("jvm") version "2.1.20"
     kotlin("plugin.serialization") version "2.1.20"
-    id("io.papermc.paperweight.userdev") version "2.0.0-beta.14"
     id("com.gradleup.shadow") version "9.0.0-beta8"
+    id("io.github.revxrsal.zapper") version "1.0.3"
+    id("io.papermc.paperweight.userdev") version "2.0.0-beta.14"
     id("xyz.jpenilla.run-paper") version "2.3.1"
 }
 
@@ -66,60 +67,67 @@ val h2Version: String by project
 
 dependencies {
     paperweight.paperDevBundle("1.21.4-R0.1-SNAPSHOT")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    zap("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // bStats
-    implementation("org.bstats:bstats-bukkit:$bStatsVersion")
+    zap("org.bstats:bstats-bukkit:$bStatsVersion")
     // Adventure
-    implementation("net.kyori:adventure-text-serializer-plain:$adventureVersion")
-    implementation("net.kyori:adventure-text-serializer-legacy:$adventureVersion")
+    zap("net.kyori:adventure-text-serializer-plain:$adventureVersion")
+    zap("net.kyori:adventure-text-serializer-legacy:$adventureVersion")
     // CommandAPI
-    implementation("dev.jorel:commandapi-bukkit-kotlin:$commandApiVersion")
+    zap("dev.jorel:commandapi-bukkit-kotlin:$commandApiVersion")
     compileOnly("dev.jorel:commandapi-bukkit-core:$commandApiVersion")
     // PAPI
     compileOnly("me.clip:placeholderapi:$papiVersion")
     // coroutines
-    implementation("com.github.shynixn.mccoroutine:mccoroutine-bukkit-api:$mcCoroutineVersion")
-    implementation("com.github.shynixn.mccoroutine:mccoroutine-bukkit-core:$mcCoroutineVersion")
+    zap("com.github.shynixn.mccoroutine:mccoroutine-bukkit-api:$mcCoroutineVersion")
+    zap("com.github.shynixn.mccoroutine:mccoroutine-bukkit-core:$mcCoroutineVersion")
     // rTag
-    implementation("com.saicone.rtag:rtag:$rTagVersion")
+    zap("com.saicone.rtag:rtag:$rTagVersion")
     // Other modules
-    implementation("com.saicone.rtag:rtag-block:$rTagVersion")
-    implementation("com.saicone.rtag:rtag-entity:$rTagVersion")
-    implementation("com.saicone.rtag:rtag-item:$rTagVersion")
+    zap("com.saicone.rtag:rtag-block:$rTagVersion")
+    zap("com.saicone.rtag:rtag-entity:$rTagVersion")
+    zap("com.saicone.rtag:rtag-item:$rTagVersion")
 
     // license server
-    implementation("dev.respark.licensegate:license-gate:$licenseGateVersion")
+    zap("dev.respark.licensegate:license-gate:$licenseGateVersion")
 
     // serialization //maybe not needed? didn't hear any mention of it in hoplite and neither is hoplite using the annotations
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-hocon:$serializationVersion")   // .conf serializationx
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")    // .json serializationx
-    implementation("net.benwoodworth.knbt:knbt:$knbtVersion")                                   // .nbt  serializationx
-    implementation("com.charleskorn.kaml:kaml:$kamlVersion")                                    // .yml  serializationx
+    zap("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
+    zap("org.jetbrains.kotlinx:kotlinx-serialization-hocon:$serializationVersion")   // .conf serializationx
+    zap("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")    // .json serializationx
+    zap("net.benwoodworth.knbt:knbt:$knbtVersion")                                   // .nbt  serializationx
+    zap("com.charleskorn.kaml:kaml:$kamlVersion")                                    // .yml  serializationx
 
     // DI
-    implementation("io.insert-koin:koin-core:$koinVersion")
+    zap("io.insert-koin:koin-core:$koinVersion")
     //caching
-    implementation("com.github.ben-manes.caffeine:caffeine:$caffeineVersion")
+    zap("com.github.ben-manes.caffeine:caffeine:$caffeineVersion")
 
     //ORM
-    implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-crypt:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-dao:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-kotlin-datetime:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-json:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-money:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-spring-boot-starter:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-migration:$exposedVersion")
+    zap("org.jetbrains.exposed:exposed-core:$exposedVersion")
+    zap("org.jetbrains.exposed:exposed-crypt:$exposedVersion")
+    zap("org.jetbrains.exposed:exposed-dao:$exposedVersion")
+    zap("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
+    zap("org.jetbrains.exposed:exposed-kotlin-datetime:$exposedVersion")
+    zap("org.jetbrains.exposed:exposed-json:$exposedVersion")
+    zap("org.jetbrains.exposed:exposed-money:$exposedVersion")
+    zap("org.jetbrains.exposed:exposed-spring-boot-starter:$exposedVersion")
+    zap("org.jetbrains.exposed:exposed-migration:$exposedVersion")
     // databases
-    implementation("org.xerial:sqlite-jdbc:$sqliteVersion")
-    implementation("org.mariadb.jdbc:mariadb-java-client:$mariadbVersion")
-    implementation("org.postgresql:postgresql:$postgresVersion")
-    implementation("com.zaxxer:HikariCP:$hikariVersion")
-    implementation("com.h2database:h2:$h2Version")
+    zap("org.xerial:sqlite-jdbc:$sqliteVersion")
+    zap("org.mariadb.jdbc:mariadb-java-client:$mariadbVersion")
+    zap("org.postgresql:postgresql:$postgresVersion")
+    zap("com.zaxxer:HikariCP:$hikariVersion")
+    zap("com.h2database:h2:$h2Version")
 }
+
+// Where dependencies .jar will be stored
+zapper {
+    libsFolder = "libs"
+    repositories { includeProjectRepositories() }
+}
+
 
 tasks {
     runServer {

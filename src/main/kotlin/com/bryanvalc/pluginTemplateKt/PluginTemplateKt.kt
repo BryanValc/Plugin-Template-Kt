@@ -15,8 +15,9 @@ import org.koin.core.component.inject
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
 import org.koin.dsl.module
+import revxrsal.zapper.ZapperJavaPlugin
 
-class PluginTemplateKt: JavaPlugin(), KoinComponent  {
+class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
 
     private val license: License by inject()
     private val loader: Loader by inject()
