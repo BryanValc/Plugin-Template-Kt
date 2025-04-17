@@ -41,7 +41,6 @@ repositories {
 // PURE MINECRAFT
 val bStatsVersion: String by project
 val adventureVersion: String by project
-val commandApiVersion: String by project
 val papiVersion: String by project
 val mcCoroutineVersion: String by project
 val rTagVersion: String by project
@@ -133,7 +132,7 @@ tasks {
     runServer {
         downloadPlugins {
             hangar("PlaceholderAPI", "2.11.6")
-            hangar("CommandAPI", "10.0.0")
+            hangar("ViaVersion", "5.3.1")
             hangar("ViaVersion", "5.3.1")
             hangar("ViaBackwards", "5.3.1")
             hangar("ViaRewind", "4.0.7")
