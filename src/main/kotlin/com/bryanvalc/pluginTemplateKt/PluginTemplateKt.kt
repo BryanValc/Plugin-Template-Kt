@@ -1,14 +1,14 @@
 package com.bryanvalc.pluginTemplateKt
 
-import com.bryanvalc.pluginTemplateKt.commands.ReadData
-import com.bryanvalc.pluginTemplateKt.commands.Reload
-import com.bryanvalc.pluginTemplateKt.commands.SetData
-import com.bryanvalc.pluginTemplateKt.commons.modules.License
-import com.bryanvalc.pluginTemplateKt.commons.modules.baseModules
-import com.bryanvalc.pluginTemplateKt.events.PlayerJoin
-import com.bryanvalc.pluginTemplateKt.modules.Debug
-import com.bryanvalc.pluginTemplateKt.modules.Loader
-import com.bryanvalc.pluginTemplateKt.modules.appModules
+import com.bryanvalc.pluginTemplateKt.command.ReadData
+import com.bryanvalc.pluginTemplateKt.command.Reload
+import com.bryanvalc.pluginTemplateKt.command.SetData
+import com.bryanvalc.pluginTemplateKt.common.modules.License
+import com.bryanvalc.pluginTemplateKt.common.modules.baseModules
+import com.bryanvalc.pluginTemplateKt.event.PlayerJoin
+import com.bryanvalc.pluginTemplateKt.module.Debug
+import com.bryanvalc.pluginTemplateKt.module.Loader
+import com.bryanvalc.pluginTemplateKt.module.appModules
 import org.bukkit.plugin.java.JavaPlugin
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject

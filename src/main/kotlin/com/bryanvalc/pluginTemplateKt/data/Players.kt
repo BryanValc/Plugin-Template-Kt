@@ -1,6 +1,6 @@
 package com.bryanvalc.pluginTemplateKt.data
 
-import com.bryanvalc.pluginTemplateKt.commons.config.StorageConfig
+import com.bryanvalc.pluginTemplateKt.common.config.StorageConfig
 import org.jetbrains.exposed.sql.Column
 import org.jetbrains.exposed.sql.Table
 import org.koin.core.component.KoinComponent

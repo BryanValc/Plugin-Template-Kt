@@ -1,6 +1,6 @@
 package com.bryanvalc.pluginTemplateKt.config
 
-import com.bryanvalc.pluginTemplateKt.commons.config.*
+import com.bryanvalc.pluginTemplateKt.common.config.*
 import kotlinx.serialization.Serializable
 
 @Serializable
