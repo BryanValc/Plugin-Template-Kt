@@ -1,8 +1,8 @@
-package com.bryanvalc.pluginTemplateKt.common.modules
+package com.bryanvalc.pluginTemplateKt.common.module
 
 import com.bryanvalc.pluginTemplateKt.common.config.*
-import com.bryanvalc.pluginTemplateKt.common.modules.repositories.LocalesRepository
-import com.bryanvalc.pluginTemplateKt.common.modules.repositories.StorageRepository
+import com.bryanvalc.pluginTemplateKt.common.module.repo.LocalesRepository
+import com.bryanvalc.pluginTemplateKt.common.module.repo.StorageRepository
 import org.bukkit.plugin.java.JavaPlugin
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.Table

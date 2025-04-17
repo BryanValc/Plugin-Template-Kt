@@ -1,6 +1,6 @@
 package com.bryanvalc.pluginTemplateKt.util
 
-import com.bryanvalc.pluginTemplateKt.common.modules.LangManager
+import com.bryanvalc.pluginTemplateKt.common.module.LangManager
 import com.bryanvalc.pluginTemplateKt.localization.LanguagePack
 import com.bryanvalc.pluginTemplateKt.module.PluginRepository
 import net.kyori.adventure.text.Component

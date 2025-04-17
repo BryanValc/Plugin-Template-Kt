@@ -1,4 +1,4 @@
-package com.bryanvalc.pluginTemplateKt.common.utils
+package com.bryanvalc.pluginTemplateKt.common.service
 
 
 import com.typesafe.config.ConfigFactory

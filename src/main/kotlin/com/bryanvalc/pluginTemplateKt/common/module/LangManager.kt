@@ -1,7 +1,7 @@
-package com.bryanvalc.pluginTemplateKt.common.modules
+package com.bryanvalc.pluginTemplateKt.common.module
 
 import com.bryanvalc.pluginTemplateKt.common.config.LanguageConfig
-import com.bryanvalc.pluginTemplateKt.common.utils.ConfLoader
+import com.bryanvalc.pluginTemplateKt.common.service.ConfLoader
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
 import java.util.Locale

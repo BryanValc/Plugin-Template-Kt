@@ -1,4 +1,4 @@
-package com.bryanvalc.pluginTemplateKt.event
+package com.bryanvalc.pluginTemplateKt.listener
 
 import com.bryanvalc.pluginTemplateKt.data.Players
 import com.github.shynixn.mccoroutine.bukkit.asyncDispatcher

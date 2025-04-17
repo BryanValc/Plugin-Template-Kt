@@ -4,9 +4,9 @@ import com.bryanvalc.pluginTemplateKt.common.config.CacheConfig
 import com.bryanvalc.pluginTemplateKt.common.config.LanguageConfig
 import com.bryanvalc.pluginTemplateKt.common.config.LicenseConfig
 import com.bryanvalc.pluginTemplateKt.common.config.StorageConfig
-import com.bryanvalc.pluginTemplateKt.common.modules.repositories.LocalesRepository
-import com.bryanvalc.pluginTemplateKt.common.modules.repositories.StorageRepository
-import com.bryanvalc.pluginTemplateKt.common.utils.ConfLoader
+import com.bryanvalc.pluginTemplateKt.common.module.repo.LocalesRepository
+import com.bryanvalc.pluginTemplateKt.common.module.repo.StorageRepository
+import com.bryanvalc.pluginTemplateKt.common.service.ConfLoader
 import com.bryanvalc.pluginTemplateKt.config.MainConfig
 import com.bryanvalc.pluginTemplateKt.data.Players
 import org.bukkit.plugin.java.JavaPlugin

@@ -1,6 +1,6 @@
 package com.bryanvalc.pluginTemplateKt.command
 
-import com.bryanvalc.pluginTemplateKt.common.utils.ConfLoader
+import com.bryanvalc.pluginTemplateKt.common.service.ConfLoader
 import com.bryanvalc.pluginTemplateKt.config.MainConfig
 import dev.jorel.commandapi.kotlindsl.commandAPICommand
 import dev.jorel.commandapi.kotlindsl.playerExecutor

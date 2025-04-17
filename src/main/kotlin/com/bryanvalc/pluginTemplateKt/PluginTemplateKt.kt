@@ -3,9 +3,9 @@ package com.bryanvalc.pluginTemplateKt
 import com.bryanvalc.pluginTemplateKt.command.ReadData
 import com.bryanvalc.pluginTemplateKt.command.Reload
 import com.bryanvalc.pluginTemplateKt.command.SetData
-import com.bryanvalc.pluginTemplateKt.common.modules.License
-import com.bryanvalc.pluginTemplateKt.common.modules.baseModules
-import com.bryanvalc.pluginTemplateKt.event.PlayerJoin
+import com.bryanvalc.pluginTemplateKt.common.module.License
+import com.bryanvalc.pluginTemplateKt.common.module.baseModules
+import com.bryanvalc.pluginTemplateKt.listener.PlayerJoin
 import com.bryanvalc.pluginTemplateKt.module.Debug
 import com.bryanvalc.pluginTemplateKt.module.Loader
 import com.bryanvalc.pluginTemplateKt.module.appModules

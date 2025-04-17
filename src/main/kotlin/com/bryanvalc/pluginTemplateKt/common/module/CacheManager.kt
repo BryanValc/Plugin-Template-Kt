@@ -1,4 +1,4 @@
-package com.bryanvalc.pluginTemplateKt.common.modules
+package com.bryanvalc.pluginTemplateKt.common.module
 
 import com.bryanvalc.pluginTemplateKt.common.config.CacheConfig
 import com.github.benmanes.caffeine.cache.Cache
