@@ -41,7 +41,7 @@ It takes into account the previous concepts, but if you are familiar with the fo
 - **Auto Database/Cache Setup**: No need to configure manually—just provide the settings! 💾
 - **Multi-Database Support**: SQLite, MariaDB, PostgreSQL, H2.
 - **Simple ORM**: Thanks to Kotlin Exposed, with clean syntax.
-- **Fast Cache**: Powered by Caffeine, no need to fiddle with sizes or expiration—server owners handle that. 🏎️
+- **Fast Cache**: Using Caffeine, no need to fiddle with sizes or expiration—server owners handle that. 🏎️
 - **Multiple Config Formats**: HOCON, JSON, YML via `kotlinx.serialization`.
 - **Simple Facade for Configs**: Pass a File/InputStream and get your data class.
 - **Server License System**: Properly end-to-end encrypted, with `license-gate`.
@@ -56,7 +56,7 @@ It takes into account the previous concepts, but if you are familiar with the fo
 - **Bundled NBT Examples**: How to write data classes in `TileEntity`, `Entity`, `ItemStack`, and vice-versa.
 - **Bundled LanguagePack Data Class**: Modify the default language file  (`.json`/`.yml`/`.hocon`) easily.
 - **Super Simple Commands**: With CommandAPI’s Kotlin DSL, it's easy to use, with Batteries Included (may switch to Lamp💡).
-- **Plain Text Serializer**: From `net.kyori`—perfect for text comparison or `equals` issues, this is the solution! ✨
+- **Plain Text Serializer**: From `net.kyori`—perfect for text comparison or `equals` issues, here's the solution! ✨
 - **Legacy Serializer**: From `net.kyori`—if you want to handle legacy text in your own way.
 - **bStats Included & Auto-Relocated**: Just provide your plugin ID, and bStats is ready to go.📊
 - **Gradleup Shadow**: More utilities than the typical Minecraft Development Wizard bundle. ⚙️
@@ -83,7 +83,7 @@ It takes into account the previous concepts, but if you are familiar with the fo
 - **Integrate Kotlin Channels**:  Implementing a signal-like system (similar to Godot’s), but use sparingly. 🌀
 - **Include MiniPlaceholders**: Integration for custom placeholder handling.
 
-## Future Plans (Under Evaluation) 🤔
+## Future Plans (Under evaluation, we'd like to know your thoughts) 🤔
 
 - **Code Documentation**:  Still prefer code to explain itself, but documentation may help. 📚
 - **Integrate ArrowKt**: For a domain-first design (unsure if it’s beneficial in most cases).
@@ -93,4 +93,4 @@ It takes into account the previous concepts, but if you are familiar with the fo
 - **Implement Configuration Migration Again**: We’re unsure about if this is a good behavior.
 - **Auto-Generate Configuration Schemas**: Would simplify configuration for users but may be overkill. 🧰
 - **Create an IntelliJ Wizard**: Exploring the possibility of an IntelliJ plugin for setup, if you’re experienced, reach out! 🧙‍♂️
-- **Create a Docs Page**: Similar to FastAPI's clean docs page, but only if the framework gets widespread use. 📖
+- **Create a Docs Page**: Similar to FastAPI's docs page, but only if the framework gets widespread use. 📖
