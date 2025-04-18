@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
+
 plugins {
     kotlin("jvm") version "2.1.20"
     kotlin("plugin.serialization") version "2.1.20"
@@ -164,6 +166,16 @@ tasks {
         relocate("org.bstats", "${project.group}.libs.bstats")
 
         //minimize() // optional, disable if you get weird behaviors in your plugin
+    }
+}
+
+tasks.withType<JavaCompile> {
+    options.compilerArgs.add("-parameters")
+}
+
+tasks.withType<KotlinJvmCompile> {
+    compilerOptions {
+        javaParameters = true
     }
 }
 
