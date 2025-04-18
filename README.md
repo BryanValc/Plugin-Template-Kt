@@ -86,10 +86,11 @@ It takes into account the previous concepts, but if you are familiar with the fo
 - **Opt-In Auto Reload When Config Changes**: `Hoplite` or `kfswatch` would make this easier. ⏱️
 - **Integrate Kotlin Channels**:  Implementing a signal-like system (similar to Godot’s), but use sparingly. 🌀
 - **Include MiniPlaceholders**: Integration for custom placeholder handling.
+- - **Code Documentation**:  Still prefer code to explain itself, but documentation may help. 📚
+- - **Create a Wiki Page**: A Wiki Page with practical examples on how to use the Framework. 📖
 
 ## Future Plans (Under evaluation, we'd like to know your thoughts) 🤔
 
-- **Code Documentation**:  Still prefer code to explain itself, but documentation may help. 📚
 - **Integrate ArrowKt**: For a domain-first design (unsure if it’s beneficial in most cases).
 - **Integrate Geary ECS**:  ECS could align with the project philosophy but needs evaluation. 🧭
 - **Use Adventure API Logger**: Debug level handling with the logger still needs refining.
@@ -97,7 +98,6 @@ It takes into account the previous concepts, but if you are familiar with the fo
 - **Implement Configuration Migration Again**: We’re unsure about if this is a good behavior.
 - **Auto-Generate Configuration Schemas**: Would simplify configuration for users but may be overkill. 🧰
 - **Create an IntelliJ Wizard**: Exploring the possibility of an IntelliJ plugin for setup, if you’re experienced, reach out! 🧙‍♂️
-- **Create a Docs Page**: Similar to FastAPI's docs page, but only if the framework gets widespread use. 📖
 
 ## Disclaimer ⚠️
 
