@@ -26,11 +26,12 @@ class PluginTemplateKt: ZapperJavaPlugin(), KoinComponent  {
     private val loader: Loader by inject()
     private val debug: Debug by inject()
 
+    override fun onLoad() {
+        initModules()
+    }
+
     override fun onEnable() {
         debug.msg("Enabling plugin template in kotlin!")
-
-        // First, Koin startup
-        initModules()
 
         // Validate license. This is a must; also we recommend to hide into other code
         // parts, here at main class is not a good practice and is easily detectable!
