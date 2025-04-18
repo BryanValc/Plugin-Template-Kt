@@ -2,6 +2,10 @@
 
 A Kotlin-based framework for PaperMC plugins that leverages Kotlin’s ergonomics and includes all the essential features for commercial plugins. It's Batteries Included and Opinionated (we prefer SQL, and MongoDB isn’t our thing – but you can integrate it if you like! 🚀).
 
+## Current State of the Project ⚠️
+
+We are currently mixing very strong technologies, the merging isn't that smooth at te beginning and there isn't a release yet, we will properly implement GitHub Releases, so before cloning/forking this project, please watch/star the project and then come back when there's a release, if you think you are experienced enough to help us get to that point any help is welcomed. 📈
+
 ## What Plugin-Template-Kt Isn't & Won't Do 🚫
 
 - **Server Fork**: We’re focused on paid plugins, not forking PaperMC.
