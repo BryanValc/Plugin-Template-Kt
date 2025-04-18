@@ -101,7 +101,7 @@ dependencies {
     zap("com.charleskorn.kaml:kaml:$kamlVersion")                                    // .yml  serializationx
 
     // DI
-    zap("io.insert-koin:koin-core:$koinVersion")
+    implementation("io.insert-koin:koin-core:$koinVersion")
     //caching
     zap("com.github.ben-manes.caffeine:caffeine:$caffeineVersion")
 
