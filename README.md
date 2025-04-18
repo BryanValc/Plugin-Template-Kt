@@ -98,3 +98,7 @@ It takes into account the previous concepts, but if you are familiar with the fo
 - **Auto-Generate Configuration Schemas**: Would simplify configuration for users but may be overkill. 🧰
 - **Create an IntelliJ Wizard**: Exploring the possibility of an IntelliJ plugin for setup, if you’re experienced, reach out! 🧙‍♂️
 - **Create a Docs Page**: Similar to FastAPI's docs page, but only if the framework gets widespread use. 📖
+
+## Disclaimer ⚠️
+
+This is a third party framework and is not affiliated with PaperMC, Minecraft, Mojang AB, or Microsoft Inc, if you use it in a way that breaks the Minecraft EULA we will take no accountability.
