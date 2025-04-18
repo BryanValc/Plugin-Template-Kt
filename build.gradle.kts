@@ -9,7 +9,7 @@ plugins {
     id("xyz.jpenilla.run-paper") version "2.3.1"
 }
 
-group = "com.bryanvalc"
+group = "dev.smartshub"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -101,7 +101,7 @@ dependencies {
     zap("com.charleskorn.kaml:kaml:$kamlVersion")                                    // .yml  serializationx
 
     // DI
-    implementation("io.insert-koin:koin-core:$koinVersion")
+    zap("io.insert-koin:koin-core:$koinVersion")
     //caching
     zap("com.github.ben-manes.caffeine:caffeine:$caffeineVersion")
 
