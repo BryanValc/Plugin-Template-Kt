@@ -21,7 +21,6 @@ repositories {
         name = "sonatype"
     }
 
-    // licensing
     maven {
         name = "resparkReleases"
         url = uri("https://maven.respark.dev/releases")
@@ -90,8 +89,9 @@ dependencies {
     zap("com.saicone.rtag:rtag-entity:$rTagVersion")
     zap("com.saicone.rtag:rtag-item:$rTagVersion")
 
-    // license server
-    zap("dev.respark.licensegate:license-gate:$licenseGateVersion")
+    // License server
+    // Implementation due to repo is not hosted at MavenCentral (zapper requieres it!)
+    implementation("dev.respark.licensegate:license-gate:$licenseGateVersion")
 
     // serialization //maybe not needed? didn't hear any mention of it in hoplite and neither is hoplite using the annotations
     zap("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
@@ -140,7 +140,7 @@ tasks {
             hangar("ViaRewind", "4.0.7")
 
         }
-        minecraftVersion("1.21")
+        minecraftVersion("1.21.4")
     }
 }
 
