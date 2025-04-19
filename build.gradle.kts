@@ -44,6 +44,7 @@ val bStatsVersion: String by project
 val papiVersion: String by project
 val mcCoroutineVersion: String by project
 val rTagVersion: String by project
+val triumphVersion: String by project
 val knbtVersion: String by project
 val kamlVersion: String by project
 
@@ -86,7 +87,7 @@ dependencies {
     zap("com.saicone.rtag:rtag-item:$rTagVersion")
 
     // Guis
-    zap("dev.triumphteam:triumph-gui:3.1.11")
+    zap("dev.triumphteam:triumph-gui:$triumphVersion")
 
     // License server
     // Implementation due to repo is not hosted at MavenCentral (zapper requieres it!)
