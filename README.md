@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/cL6yz85.png" />
 </a>
 
-Kotlin-based framework for PaperMC plugins that leverages Kotlin’s ergonomics and includes all the essential features for commercial plugins. It's Batteries Included and Opinionated (we prefer SQL, and MongoDB isn’t our thing – but you can integrate it if you like! 🚀).
+Kotlin-based framework for PaperMC plugins that leverages Kotlin’s ergonomics and includes all the essential features for commercial plugins. It's Batteries Included and Opinionated.
 
 ## Current State of the Project ⚠️
 
@@ -17,7 +17,6 @@ We are currently mixing very strong technologies, the merging isn't that smooth 
 - **Support older versions**: If you’re targeting older versions, you probably know what you're doing! 🧙‍♂️
 - **Security Guarantees**: Offers obfuscation, but for serious protection, you’ll want a stronger solution. 🔒
 - **Separate Dependencies Plugin**: Avoids version mismatches and dependency conflicts. You can manage your own if needed. 🔄
-- **Become paywalled**: I do Software Dev for a living, but this one’s free to help make plugin development easier. 💻💸
 
 ## Skill Level 🎓
 
