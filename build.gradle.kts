@@ -41,7 +41,6 @@ repositories {
 }
 // PURE MINECRAFT
 val bStatsVersion: String by project
-val adventureVersion: String by project
 val papiVersion: String by project
 val mcCoroutineVersion: String by project
 val rTagVersion: String by project
@@ -71,9 +70,6 @@ dependencies {
 
     // bStats
     zap("org.bstats:bstats-bukkit:$bStatsVersion")
-    // Adventure
-    zap("net.kyori:adventure-text-serializer-plain:$adventureVersion")
-    zap("net.kyori:adventure-text-serializer-legacy:$adventureVersion")
     // Lamp
     zap("io.github.revxrsal:lamp.common:4.0.0-beta.25")
     zap("io.github.revxrsal:lamp.bukkit:4.0.0-beta.25")
