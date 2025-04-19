@@ -1,6 +1,8 @@
-# Plugin-Template-Kt
+<a href="https://discord.gg/bQbV6PsX">
+  <img src="https://i.imgur.com/cL6yz85.png" />
+</a>
 
-A Kotlin-based framework for PaperMC plugins that leverages Kotlin’s ergonomics and includes all the essential features for commercial plugins. It's Batteries Included and Opinionated (we prefer SQL, and MongoDB isn’t our thing – but you can integrate it if you like! 🚀).
+Kotlin-based framework for PaperMC plugins that leverages Kotlin’s ergonomics and includes all the essential features for commercial plugins. It's Batteries Included and Opinionated (we prefer SQL, and MongoDB isn’t our thing – but you can integrate it if you like! 🚀).
 
 ## Current State of the Project ⚠️
 
