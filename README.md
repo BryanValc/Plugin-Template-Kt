@@ -57,10 +57,8 @@ It takes into account the previous concepts, but if you are familiar with the fo
 - **Placeholder Processing**: Placeholders, Legacy and MiniMessage processed in that order, as simple as `Player.sendParsed("SomeText")`.
 - **Multi-Language**: Automatically map Language Packs with auto-completion. 🌍
 - **Bundled Default Configurations**: Includes data classes for Database and Cache to help you get started.
-- **Bundled Examples**: Of CommandAPI commands.
-- **Bundled NBT Examples**: How to write data classes in `TileEntity`, `Entity`, `ItemStack`, and vice-versa.
 - **Bundled LanguagePack Data Class**: Modify the default language file  (`.json`/`.yml`/`.hocon`) easily.
-- **Super Simple Commands**: With CommandAPI’s Kotlin DSL, it's easy to use, with Batteries Included (may switch to Lamp💡).
+- **Super Simple Commands**: With Lamp Commands, it's easy to use, with Batteries Included.
 - **Plain Text Serializer**: From `net.kyori`—perfect for text comparison or `equals` issues, here's the solution! ✨
 - **Legacy Serializer**: From `net.kyori`—if you want to handle legacy text in your own way.
 - **bStats Included & Auto-Relocated**: Just provide your plugin ID, and bStats is ready to go.📊
@@ -68,20 +66,19 @@ It takes into account the previous concepts, but if you are familiar with the fo
 - **Run Server in IntelliJ**: With a simple button, thanks to `jpenilla.run-paper`. It is recommended to use the debug button.
 - **Easier Debugging**: Your terminal is connected to the `run-paper` server, and you can set breakpoints and inspect variables. 🐞
 - **Debug Wrapper**: Logs debug messages to your environment server, not your clients' server, active only with a custom JVM arg(we've already setup this for you). 🛠️
-- **Common Plugins Auto-Downloaded**: PlaceholderAPI, CommandAPI, ViaVersion, ViaBackwards, ViaRewind in the `run-paper` task. 📥
+- **Common Plugins Auto-Downloaded**: PlaceholderAPI, ViaVersion, ViaBackwards, ViaRewind in the `run-paper` task. 📥
 - **Instant Reload Gracefully**: HotSwap lets you apply code changes without restarting the server (still ironing out a Shadow plugin issue).
+- **Zapper Gradle Plugin**: Improved dependency management. ⚡
+- - **Paperweight-UserDev**: Super simple NMS access.
 
 ## Features Being Worked On 🔨
 
 - **Single-Click ProGuard Obfuscation**: A protection layer to make it harder for competitors to steal your code. 🔒
-- **Zapper Gradle Plugin**: Improved dependency management. ⚡
-- **Lamp Commands**: Moving away from CommandAPI dependency.
 - **PacketEvents**: Bundled with Shadow for packet handling, your clients won't need to download PacketEvents plugin. 📦
-- **Paperweight-UserDev**: Super simple NMS access.
 - **Fix Overlap Between Shadow and HotSwap**: Working on a solution, possibly via PaperMake GitHub.
 - **Fix Reload Command**: Post-refactor issues with the bundled reload command.
 - **Version Update Check Utility**: Automated version check. 🔍
-- **Provide Code Snippets**: For commands, event handlers, data classes, DAOs, etc. ✂️
+- **Provide Code Snippets**: With GitHub Gists, for commands, event handlers, data classes, DAOs, etc. ✂️
 - **Add a Test Framework**: In progress to simplify unit tests. 🧪
 - **Database Migration System**: Migrate databases (e.g., SQLite to MariaDB) with ease. 💾➡️💻
 - **Opt-In Auto Reload When Config Changes**: `Hoplite` or `kfswatch` would make this easier. ⏱️
@@ -91,7 +88,6 @@ It takes into account the previous concepts, but if you are familiar with the fo
 - **Create a Wiki Page**: A Wiki Page with practical examples on how to use the Framework. 📖
 
 ## Future Plans (Under evaluation, we'd like to know your thoughts) 🤔
-
 
 - **Integrate ArrowKt**: For a domain-first design (unsure if it’s beneficial in most cases).
 - **Integrate Geary ECS**:  ECS could align with the project philosophy but needs evaluation. 🧭
