@@ -85,6 +85,9 @@ dependencies {
     zap("com.saicone.rtag:rtag-entity:$rTagVersion")
     zap("com.saicone.rtag:rtag-item:$rTagVersion")
 
+    // Guis
+    zap("dev.triumphteam:triumph-gui:3.1.11")
+
     // License server
     // Implementation due to repo is not hosted at MavenCentral (zapper requieres it!)
     implementation("dev.respark.licensegate:license-gate:$licenseGateVersion")
@@ -160,6 +163,7 @@ tasks {
     shadowJar { // TODO: maybe include the project name in the relocate, in case they have different project with the same group
         relocate("com.saicone.rtag", "${project.group}.libs.rtag")
         relocate("org.bstats", "${project.group}.libs.bstats")
+        relocate("dev.triumphteam.gui", "${project.group}.gui")
 
         //minimize() // optional, disable if you get weird behaviors in your plugin
     }
