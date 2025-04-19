@@ -14,11 +14,8 @@ object ItemConverter: KoinComponent {
         val tag = RtagItem(item)
         // would use name of class, but if they refactor to another location the reference would be lost
         val success = tag.set(serializable, plugin.name.lowercase(), serializable::class.java.simpleName.lowercase())
-        return if (success) {
-            tag.load()
-            true
-        } else {
-            false
+        return success.also {
+            if (it) { tag.load() }
         }
     }
 
@@ -26,11 +23,8 @@ object ItemConverter: KoinComponent {
         val tag = RtagItem(item)
         // would use name of class, but if they refactor to another location the reference would be lost
         val success = tag.remove(plugin.name.lowercase(), serializable::class.java.simpleName.lowercase())
-        return if (success) {
-            tag.load()
-            true
-        } else {
-            false
+        return success.also {
+            if (it) { tag.load() }
         }
     }
 
