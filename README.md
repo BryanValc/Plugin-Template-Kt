@@ -6,14 +6,14 @@ Kotlin-based framework for PaperMC plugins that leverages Kotlin’s ergonomics 
 
 ## Current State of the Project ⚠️
 
-We are currently mixing very strong technologies, the merging isn't that smooth at te beginning and there isn't a release yet, we will properly implement GitHub Releases, so before cloning/forking this project, please watch/star the project and then come back when there's a release, if you think you are experienced enough to help us get to that point any help is welcomed. 📈
+We are currently mixing very strong technologies, the merging isn't that smooth at the beginning and there isn't a release yet, we will properly implement GitHub Releases, so before cloning/forking this project, please watch/star the project and then come back when there's a release, if you think you are experienced enough to help us get to that point any help is welcomed. 📈
 
 ## What Plugin-Template-Kt Isn't & Won't Do 🚫
 
 - **Server Fork**: We’re focused on paid plugins, not forking PaperMC.
 - **Fully Featured Library**: It combines top libraries with Kotlin sugar syntax to speed up commercial plugin production.🍯
 - **Core**: There are existing solutions for this; if you build one with this framework, we’d love to see it!
-- **Multi Platform**: We stick to Paper; no Spigot or proxy frameworks here. 🧱
+- **Multi Platform**: We stick to Paper; no Spigot or Proxy here. 🧱
 - **Support older versions**: If you’re targeting older versions, you probably know what you're doing! 🧙‍♂️
 - **Security Guarantees**: Offers obfuscation, but for serious protection, you’ll want a stronger solution. 🔒
 - **Separate Dependencies Plugin**: Avoids version mismatches and dependency conflicts. You can manage your own if needed. 🔄
@@ -26,7 +26,7 @@ You should know Kotlin and ideally have some plugin dev experience. New to Minec
 - Dependency Injection 🧩
 - `kotlinx.serialization` `@Serializable` 📝
 - SQL Transactions 💾
-- ORM basics
+- ORM basics 📙
 - Kotlin Coroutines ⏳
 
 ### Ideal Skills 🔥
