@@ -72,6 +72,7 @@ val h2Version: String by project
 
 // GENERAL PURPOSE EXTRAS
 val atomicfuVersion: String by project
+val immutableVersion: String by project
 
 dependencies {
     paperweight.paperDevBundle("1.21.4-R0.1-SNAPSHOT")
@@ -132,7 +133,8 @@ dependencies {
 
     // General purpose extras
     // Atomics for high concurrency on primitives
-    implementation("org.jetbrains.kotlinx:atomicfu:${atomicfuVersion}")
+    zap("org.jetbrains.kotlinx:atomicfu:${atomicfuVersion}")
+    zap("org.jetbrains.kotlinx:kotlinx-collections-immutable:${immutableVersion}")
 }
 
 // Where dependencies .jar will be stored
