@@ -7,7 +7,7 @@ plugins {
     id("org.jetbrains.kotlinx.atomicfu") version "0.27.0"
 
     // Dependencies
-    id("com.gradleup.shadow") version "9.0.0-beta8"
+    id("com.gradleup.shadow") version "8.3.2"
     id("io.github.revxrsal.zapper") version "1.0.3"
 
     // Development quality of life
