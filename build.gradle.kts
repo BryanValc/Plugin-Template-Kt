@@ -1,10 +1,16 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
 plugins {
+    // Features
     kotlin("jvm") version "2.1.20"
     kotlin("plugin.serialization") version "2.1.20"
+    id("org.jetbrains.kotlinx.atomicfu") version "0.27.0"
+
+    // Dependencies
     id("com.gradleup.shadow") version "9.0.0-beta8"
     id("io.github.revxrsal.zapper") version "1.0.3"
+
+    // Development quality of life
     id("io.papermc.paperweight.userdev") version "2.0.0-beta.14"
     id("xyz.jpenilla.run-paper") version "2.3.1"
 }
@@ -64,6 +70,8 @@ val hikariVersion: String by project
 val postgresVersion: String by project
 val h2Version: String by project
 
+// GENERAL PURPOSE EXTRAS
+val atomicfuVersion: String by project
 
 dependencies {
     paperweight.paperDevBundle("1.21.4-R0.1-SNAPSHOT")
@@ -115,12 +123,16 @@ dependencies {
     zap("org.jetbrains.exposed:exposed-money:$exposedVersion")
     zap("org.jetbrains.exposed:exposed-spring-boot-starter:$exposedVersion")
     zap("org.jetbrains.exposed:exposed-migration:$exposedVersion")
-    // databases
+    // Databases
     zap("org.xerial:sqlite-jdbc:$sqliteVersion")
     zap("org.mariadb.jdbc:mariadb-java-client:$mariadbVersion")
     zap("org.postgresql:postgresql:$postgresVersion")
     zap("com.zaxxer:HikariCP:$hikariVersion")
     zap("com.h2database:h2:$h2Version")
+
+    // General purpose extras
+    // Atomics for high concurrency on primitives
+    implementation("org.jetbrains.kotlinx:atomicfu:${atomicfuVersion}")
 }
 
 // Where dependencies .jar will be stored
