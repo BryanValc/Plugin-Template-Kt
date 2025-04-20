@@ -90,7 +90,7 @@ dependencies {
     zap("dev.triumphteam:triumph-gui:$triumphVersion")
 
     // License server
-    // Implementation due to repo is not hosted at MavenCentral (zapper requieres it!)
+    // Implementation due to repo is not hosted at MavenCentral (zapper requires it!)
     implementation("dev.respark.licensegate:license-gate:$licenseGateVersion")
 
     // serialization //maybe not needed? didn't hear any mention of it in hoplite and neither is hoplite using the annotations
