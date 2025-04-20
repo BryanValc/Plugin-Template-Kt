@@ -121,8 +121,6 @@ dependencies {
     zap("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
     zap("org.jetbrains.exposed:exposed-kotlin-datetime:$exposedVersion")
     zap("org.jetbrains.exposed:exposed-json:$exposedVersion")
-    zap("org.jetbrains.exposed:exposed-money:$exposedVersion")
-    zap("org.jetbrains.exposed:exposed-spring-boot-starter:$exposedVersion")
     zap("org.jetbrains.exposed:exposed-migration:$exposedVersion")
     // Databases
     zap("org.xerial:sqlite-jdbc:$sqliteVersion")
