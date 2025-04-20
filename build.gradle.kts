@@ -155,6 +155,18 @@ tasks {
     }
 }
 
+tasks {
+    runDevBundleServer {
+        downloadPlugins {
+            hangar("PlaceholderAPI", "2.11.6")
+            hangar("ViaVersion", "5.3.1")
+            hangar("ViaBackwards", "5.3.1")
+            hangar("ViaRewind", "4.0.7")
+
+        }
+    }
+}
+
 tasks.withType(xyz.jpenilla.runtask.task.AbstractRun::class) {
     javaLauncher = javaToolchains.launcherFor {
         vendor = JvmVendorSpec.JETBRAINS
