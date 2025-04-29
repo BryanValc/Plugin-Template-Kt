@@ -42,7 +42,7 @@ class Storage(
                 }
                 val h2Path = storageFolder.resolve(config.address).resolve(config.database).absolutePath
                 database = Database.Companion.connect(
-                    url = "jdbc:h2:file:$h2Path;DB_CLOSE_DELAY=-1;MODE=MySQL",
+                    url = "jdbc:h2:file:$h2Path",
                     driver = "org.h2.Driver",
                     user = config.username,
                     password = config.password
