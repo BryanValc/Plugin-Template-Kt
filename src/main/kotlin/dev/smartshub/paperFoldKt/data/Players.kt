@@ -1,20 +1,18 @@
 package dev.smartshub.paperFoldKt.data
 
-import dev.smartshub.paperFoldKt.common.config.StorageConfig
+import org.jetbrains.exposed.dao.UUIDEntity
+import org.jetbrains.exposed.dao.UUIDEntityClass
+import org.jetbrains.exposed.dao.id.EntityID
+import org.jetbrains.exposed.dao.id.UUIDTable
 import org.jetbrains.exposed.sql.Column
-import org.jetbrains.exposed.sql.Table
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
 import java.util.UUID
 
-object Players : Table(), KoinComponent {
-
-    private val config: StorageConfig by inject() //TODO: not sure if this is the best workaround
-
-    val uuid: Column<UUID> = uuid("uuid")
+object Players : UUIDTable() {
     val name: Column<String> = varchar("name", 50)
+}
 
-    override val primaryKey = PrimaryKey(uuid)
-    override val tableName: String
-        get() = config.tablePrefix+"players"
+class PlayerDao(id: EntityID<UUID>) : UUIDEntity(id) {
+    companion object : UUIDEntityClass<PlayerDao>(Players)
+
+    var name by Players.name
 }
