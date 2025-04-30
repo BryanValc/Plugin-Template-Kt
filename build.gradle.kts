@@ -142,6 +142,27 @@ zapper {
 }
 
 
+// Accept the eula automatically
+tasks.register("acceptEula") {
+    doLast {
+        val runDir = file("$rootDir/run")
+        val eulaFile = file("$runDir/EULA.txt")
+        if (!runDir.exists()) runDir.mkdirs()
+        if (!eulaFile.exists()) {
+            eulaFile.writeText("eula=true")
+        }
+    }
+}
+
+tasks.named("runServer") {
+    dependsOn("acceptEula")
+}
+tasks.named("runDevBundleServer") {
+    dependsOn("acceptEula")
+}
+
+
+
 tasks {
     runServer {
         downloadPlugins {
@@ -174,7 +195,7 @@ tasks.withType(xyz.jpenilla.runtask.task.AbstractRun::class) {
     }
     jvmArgs(
         "-D${project.name.lowercase()}.debug=true",
-        "-XX:+AllowEnhancedClassRedefinition" // TODO: create a separate artifact without shadowJar for this to be effective every time
+        "-XX:+AllowEnhancedClassRedefinition"
         )
 }
 
