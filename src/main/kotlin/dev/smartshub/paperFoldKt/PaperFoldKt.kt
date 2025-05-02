@@ -31,7 +31,7 @@ class PaperFoldKt: ZapperJavaPlugin(), KoinComponent  {
     }
 
     override fun onEnable() {
-        debug.msg("Enabling plugin template in kotlin!")
+        debug.msg { "Enabling plugin template in kotlin!" }
 
         // Validate license. This is a must; also we recommend to hide into other code
         // parts, here at main class is not a good practice and is easily detectable!
@@ -51,7 +51,7 @@ class PaperFoldKt: ZapperJavaPlugin(), KoinComponent  {
     }
 
     override fun onDisable() {
-       debug.msg("Disabling plugin template in kotlin!")
+       debug.msg { "Disabling plugin template in kotlin!" }
     }
 
     private fun initModules(){
@@ -84,7 +84,7 @@ class PaperFoldKt: ZapperJavaPlugin(), KoinComponent  {
             Bukkit.getPluginManager().disablePlugin(this)
             return
         }
-        debug.msg("License loaded correctly")
+        debug.msg { "License loaded correctly" }
     }
 
     private fun registerEvents(){

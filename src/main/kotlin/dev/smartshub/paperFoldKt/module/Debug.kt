@@ -7,9 +7,9 @@ class Debug(val plugin: JavaPlugin) {
     val logger = plugin.logger
     val debugEnabled = System.getProperty("${plugin.name.lowercase()}.debug","false").toBoolean()
 
-    fun msg(message: String) {
+    fun msg(message: () ->  String) {
         if(!debugEnabled) return
-        logger.info { message }
+        logger.info { message.invoke() }
     }
 
 }
