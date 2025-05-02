@@ -14,12 +14,8 @@ object Messaging: KoinComponent {
     private val langManager: LangManager by inject()
     private val pluginRepository: PluginRepository by inject()
 
-    fun Player.sendParsed(message: String) {
-        val placeholderApiEnabled = pluginRepository.placeholderApi != null
-        var text = message
-        if (placeholderApiEnabled) { PlaceholderParse.parse(this, text)} //placeholders
-        text = LegacyMessage.fromLegacy(text)                       //legacy
-        var component = MiniMessage.miniMessage().deserialize(text) //minimessage
+    fun Player.sendParsed(message: String) {                  //legacy
+        var component = this.getParsed(message)
         this.sendMessage(component)                                 //send
     }
 
