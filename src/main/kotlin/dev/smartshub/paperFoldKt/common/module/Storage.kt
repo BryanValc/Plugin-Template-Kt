@@ -4,8 +4,10 @@ import dev.smartshub.paperFoldKt.common.config.StorageConfig
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.Table
+import org.jetbrains.exposed.sql.transactions.TransactionManager
 import org.jetbrains.exposed.sql.transactions.transaction
 import java.io.File
+import java.sql.Connection
 
 class Storage(
     private val config: StorageConfig,
@@ -20,10 +22,12 @@ class Storage(
         var database: Database
 
         when(storageMethod) {
-            "sqlite" ->
+            "sqlite" -> {
                 database = Database.Companion.connect("jdbc:sqlite:${storageFolder}/${config.database}",
                     driver = "org.sqlite.JDBC")
-            "mariadb" ->
+                TransactionManager.manager.defaultIsolationLevel = Connection.TRANSACTION_SERIALIZABLE
+            }
+                "mariadb" ->
                 database = Database.Companion.connect("jdbc:mariadb://${config.address}/${config.database}?${config.args}",
                     driver = "org.mariadb.jdbc.Driver",
                     user = config.username,
